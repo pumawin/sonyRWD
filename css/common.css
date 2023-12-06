@@ -1,0 +1,472 @@
+@charset 'utf-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: local("Pretendard Variable"), url("./images/PretendardVariable.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-Thin.woff") format("woff");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./images/Pretendard-Black.woff") format("woff");
+  font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+  --main-color: #2f353d;
+  --main-point-color: #5865f5;
+  --text-color: #000;
+  --sub-color: #2f353d;
+  --title-color: #2e3fff;
+  --line-light: #5865f5;
+  --line-dark: #bebdbd;
+  --btn-point-color: #5865f5;
+  --trs: 3s;
+}
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font: 1rem "pretendard", sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden; /* ovxh */
+  word-break: keep-all; /* wbka */
+  text-transform: capitalize; /* ttc */
+  -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+}
+.inner {
+  width: 118rem;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  /* background: #ff5; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+}
+
+.gnb {
+  display: flex;
+  width: 50rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gnb li a {
+  display: block;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--sub-color);
+  position: relative;
+}
+
+.gnb li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* trftx */
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: var(--main-point-color);
+  transition: var(--trs);
+}
+.gnb li a:hover::after {
+  width: 100%;
+}
+
+.logo a {
+  display: block;
+  width: 8rem;
+  aspect-ratio: 1/0.5594059405940594;
+  background: url(../img/header-main-logo.svg) no-repeat 0 0 / contain;
+}
+
+.util {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+.btn-search {
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/header-ico-search.svg) no-repeat 50% / 90%;
+}
+.btn-cart {
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/header-cart.svg) no-repeat 50% / contain;
+}
+.btn-menu {
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/header-ico-list.svg) no-repeat 50% / 80%;
+}
+
+h3 {
+  color: var(--title-color);
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 10rem;
+}
+.title > p {
+  font-weight: 700;
+  font-size: 4.8rem;
+  color: #000;
+  margin-top: 1.7rem;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+.btn-more {
+  display: flex;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  padding: 2rem 8.8rem;
+  margin-top: 7rem;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  gap: 2rem;
+}
+.btn-more:hover {
+  background: var(--title-color);
+  color: #fff;
+  border: none;
+  padding: 2.1rem 8.9rem;
+}
+
+.btn-more::after {
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url(../img/btn-ico-more-b.svg) no-repeat 0 0 / contain;
+  gap: 1.2rem;
+}
+.btn-more:hover::after {
+  background: url(../img/btn-ico-more-w.svg) no-repeat 0 0 / contain;
+}
+
+#footer {
+  background: #000;
+  padding: 10rem 0;
+  /* margin-top: 28.8rem; */
+  margin-top: 15vw;
+}
+
+#footer > .inner > h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #999;
+}
+
+.recent-list {
+  display: flex;
+  margin-top: 2.4rem;
+  gap: 2rem;
+}
+.recent-list li {
+  width: 22rem;
+  background: #fff;
+  text-align: center;
+}
+.recent-list li:hover {
+  box-shadow: inset 0 0 0 2px var(--title-color);
+}
+.recent-list li dl {
+  margin: 1rem 0 2rem 1.5rem;
+}
+.recent-list li dl dt {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.recent-list li dl dd {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--line-dark);
+}
+
+.info-con {
+  margin-top: 5rem;
+  padding: 4.2rem 0;
+  border-top: 1px solid var(--line-dark);
+}
+.info {
+  color: var(--line-dark);
+  display: flex;
+  width: 51.7rem;
+  width: 50%;
+  justify-content: space-between;
+}
+.info li {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.sns-ico {
+  display: flex;
+  width: 17.6rem;
+  justify-content: space-between;
+
+  margin-top: 3rem;
+}
+.sns-ico a:hover {
+  background: var(--title-color);
+  padding: 0.5rem;
+}
+.sns-ico a {
+  display: flex;
+  width: 5.5rem;
+  height: 5.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+address {
+  color: var(--line-dark);
+  margin-top: 4.2rem;
+}
+address > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+address > strong {
+  display: block;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  margin-top: 1rem;
+}
+.hidden {
+  display: none;
+}
+.btn-top {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 10rem;
+  height: 10rem;
+  background: var(--main-color);
+}
+@media (max-width: 1000px) {
+  .info li {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+/* 반응형 분기점 inner크기 */
+@media (max-width: 1180px) {
+  .inner {
+    width: 94.7917%; /* 테블릿 디자인의 이너의 크기를 미리계산한 것이다. */
+  }
+  .main-ico {
+    flex-wrap: wrap;
+  }
+  .main-ico > li {
+    width: 14.3rem;
+    height: 13.3rem;
+  }
+}
+
+/* 태블릿 디자인 */
+@media (max-width: 768px) {
+  nav {
+    height: 6rem;
+  }
+  .logo a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    top: 1rem;
+  }
+
+  .btn-menu {
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+  }
+
+  .inner .gnb {
+    display: none;
+  }
+
+  .btn-wrap {
+    display: none;
+    gap: 1rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .title > p {
+    font-size: 3rem;
+  }
+
+  #footer {
+    padding: 11rem 0;
+  }
+  .info li {
+    font-size: 1.8rem;
+  }
+  .info {
+    width: 70%;
+    margin: 2rem auto;
+  }
+  .sns-ico {
+    margin: 0 auto;
+  }
+  address > p {
+    text-align: center;
+  }
+  address > strong {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+}
+.btn-top {
+  width: 8rem;
+  height: 8rem;
+  background: var(--line-dark);
+}
+@media (max-width: 635px) {
+  .info li {
+    font-size: 1.5rem;
+  }
+  .info {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .btn-top {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+/* 모바일 디자인 */
+@media (max-width: 390px) {
+  .inner {
+    width: 89.7436%;
+  }
+
+  .util {
+    gap: 0.2rem;
+  }
+  .btn-search {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .btn-cart {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .btn-menu {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 1.5rem;
+  }
+  .sns-ico {
+    margin: 0 auto;
+  }
+  .info li {
+    font-size: 1.2rem;
+  }
+  .info {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  address > p {
+    text-align: center;
+  }
+  address > strong {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  #footer {
+    margin-top: 10.8rem;
+    padding: 11rem 0;
+  }
+}
